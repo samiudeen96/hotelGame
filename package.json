@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "git": "git add . && git commit -m 'update' && git push",
-    "predeploy": "ng build --configuration production --base-href https://hasnatech.github.io/hotel_game/",
+    "predeploy": "ng build --configuration production --base-href ",
     "deploy": "gh-pages -d dist/hotel_game",
     "upload": "ng build --configuration production --base-href ./"
   },
