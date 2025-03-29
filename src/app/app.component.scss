@@ -1,0 +1,22 @@
+.mheight {
+  // min-height: calc(100vh - 139px);
+  min-height: 100vh;
+  // background-color: red;
+  // height: 100vh;
+
+  &.setHeight {
+
+    // height: calc(100vh - 139px);
+    .scaleToFit {
+      height: auto !important;
+    }
+  }
+}
+.boxwrapper {
+  width: 1600px;
+  // height: 760px;
+  // width: 1920px;
+  height: 800px;
+  border-right: 1px solid #ebebeb;
+  background-color: #ebebeb;
+}

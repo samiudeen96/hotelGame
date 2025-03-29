@@ -1,0 +1,687 @@
+// .zoomable-element {
+//     transition: transform 300ms ease-in-out;
+//   }
+
+// .zoom-box {
+//     width: 100px;
+//     height: 100px;
+//     background-color: #3498db;
+//     color: #fff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+//     transition: transform 0.3s;
+//   }
+
+//   .zoom-in {
+//     transform: scale(0);
+//     transition: transform 0.3s ease-in-out;
+//   }
+
+//   .zoom-in.active {
+//     transform: scale(1);
+//   }
+
+
+//   .log {
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     height: auto;
+//     z-index: 2000;
+//     transform: translateX(-50%) translateY(-50%);
+// }
+
+// .zoomable-element {
+//   transition: transform 300ms ease-in-out;
+// }
+
+
+// .telephone {
+//   position: relative;
+//   width: 100px;
+//   height: 150px;
+//   background-color: #333;
+//   border-radius: 15px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .phone-body {
+//   width: 80px;
+//   height: 120px;
+//   background-color: #222;
+//   border-radius: 10px;
+// }
+
+// .ringer {
+//   position: absolute;
+//   width: 20px;
+//   height: 20px;
+//   background-color: red;
+//   border-radius: 50%;
+//   animation: ringing 0.5s alternate infinite;
+// }
+
+// @keyframes ringing {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(10px);
+//   }
+// }
+
+
+
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   margin: 0;
+// }
+
+// .telephone {
+//   position: relative;
+//   animation: ringing 0.5s alternate infinite;
+// }
+
+// .phone-image {
+//   width: 200px;
+//   height: auto;
+// }
+
+// .ringer {
+//   position: absolute;
+//   width: 20px;
+//   height: 20px;
+//   background-color: red;
+//   border-radius: 50%;
+// }
+
+// @keyframes ringing {
+//   0% {
+//       transform: translateX(0);
+//   }
+//   100% {
+//       transform: translateX(10px);
+//   }
+// }
+
+
+// .telephone {
+//   position: relative;
+//   animation: ringing 0.5s alternate infinite;
+// }
+
+// .phone-image {
+//   width: 200px;
+//   height: auto;
+// }
+
+// .ringer {
+//   position: absolute;
+//   width: 20px;
+//   height: 20px;
+//   background-color: red;
+//   border-radius: 50%;
+// }
+
+// @keyframes ringing {
+//   0% {
+//     transform: translateX(0);
+//   }
+
+//   100% {
+//     transform: translateX(10px);
+//   }
+// }
+
+
+
+// body {
+//   background-color: #eee
+// }
+
+// .ringing-bell {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transition: translate(-50%, -50%);
+//   animation: ring 0.5s alternate infinite;
+// }
+
+// .faa-ring {
+//   color: red
+// }
+
+// @-webkit-keyframes ring {
+//   0% {
+//     -webkit-transform: rotate(-15deg);
+//     transform: rotate(-15deg)
+//   }
+
+//   2% {
+//     -webkit-transform: rotate(15deg);
+//     transform: rotate(15deg)
+//   }
+
+//   4% {
+//     -webkit-transform: rotate(-18deg);
+//     transform: rotate(-18deg)
+//   }
+
+//   6% {
+//     -webkit-transform: rotate(18deg);
+//     transform: rotate(18deg)
+//   }
+
+//   8% {
+//     -webkit-transform: rotate(-22deg);
+//     transform: rotate(-22deg)
+//   }
+
+//   10% {
+//     -webkit-transform: rotate(22deg);
+//     transform: rotate(22deg)
+//   }
+
+//   12% {
+//     -webkit-transform: rotate(-18deg);
+//     transform: rotate(-18deg)
+//   }
+
+//   14% {
+//     -webkit-transform: rotate(18deg);
+//     transform: rotate(18deg)
+//   }
+
+//   16% {
+//     -webkit-transform: rotate(-12deg);
+//     transform: rotate(-12deg)
+//   }
+
+//   18% {
+//     -webkit-transform: rotate(12deg);
+//     transform: rotate(12deg)
+//   }
+
+//   20% {
+//     -webkit-transform: rotate(0deg);
+//     transform: rotate(0deg)
+//   }
+// }
+
+// @keyframes ring {
+//   0% {
+//     -webkit-transform: rotate(-15deg);
+//     -ms-transform: rotate(-15deg);
+//     transform: rotate(-15deg)
+//   }
+
+//   2% {
+//     -webkit-transform: rotate(15deg);
+//     -ms-transform: rotate(15deg);
+//     transform: rotate(15deg)
+//   }
+
+//   4% {
+//     -webkit-transform: rotate(-18deg);
+//     -ms-transform: rotate(-18deg);
+//     transform: rotate(-18deg)
+//   }
+
+//   6% {
+//     -webkit-transform: rotate(18deg);
+//     -ms-transform: rotate(18deg);
+//     transform: rotate(18deg)
+//   }
+
+//   8% {
+//     -webkit-transform: rotate(-22deg);
+//     -ms-transform: rotate(-22deg);
+//     transform: rotate(-22deg)
+//   }
+
+//   10% {
+//     -webkit-transform: rotate(22deg);
+//     -ms-transform: rotate(22deg);
+//     transform: rotate(22deg)
+//   }
+
+//   12% {
+//     -webkit-transform: rotate(-18deg);
+//     -ms-transform: rotate(-18deg);
+//     transform: rotate(-18deg)
+//   }
+
+//   14% {
+//     -webkit-transform: rotate(18deg);
+//     -ms-transform: rotate(18deg);
+//     transform: rotate(18deg)
+//   }
+
+//   16% {
+//     -webkit-transform: rotate(-12deg);
+//     -ms-transform: rotate(-12deg);
+//     transform: rotate(-12deg)
+//   }
+
+//   18% {
+//     -webkit-transform: rotate(12deg);
+//     -ms-transform: rotate(12deg);
+//     transform: rotate(12deg)
+//   }
+
+//   20% {
+//     -webkit-transform: rotate(0deg);
+//     -ms-transform: rotate(0deg);
+//     transform: rotate(0deg)
+//   }
+// }
+
+// .faa-ring.animated,
+// .faa-ring.animated-hover:hover,
+// .faa-parent.animated-hover:hover>.faa-ring {
+//   -webkit-animation: ring 2s ease infinite;
+//   animation: ring 2s ease infinite;
+//   transform-origin-x: 50%;
+//   transform-origin-y: 0px;
+//   transform-origin-z: initial
+// }
+
+
+
+
+// .phone {
+//   width: 100px;
+//   height: 200px;
+//   background-color: #000;
+//   border-radius: 15px;
+//   position: relative;
+// }
+
+// .base {
+//   width: 80px;
+//   height: 20px;
+//   background-color: #333;
+//   border-radius: 10px;
+//   position: absolute;
+//   bottom: 10px;
+//   left: 10px;
+// }
+
+// .screen {
+//   width: 70px;
+//   height: 130px;
+//   background-color: #fff;
+//   border-radius: 10px;
+//   position: absolute;
+//   top: 20px;
+//   left: 15px;
+// }
+
+// @keyframes ring {
+//   0% {
+//     transform: scale(1);
+//   }
+
+//   50% {
+//     transform: scale(1.05);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }
+
+
+// .content {
+//   width: 200px;
+//   height: 100px;
+//   background-color: lightblue;
+//   overflow: hidden;
+// }
+
+// button {
+//   margin-top: 20px;
+// }
+
+
+// .array-item {
+//   margin: 5px;
+//   padding: 10px;
+//   background-color: lightblue;
+//   border: 1px solid #333;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// input {
+//   margin-right: 10px;
+// }
+
+// // button {
+// //   background-color: red;
+// //   color: white;
+// //   border: none;
+// //   cursor: pointer;
+// // }
+
+
+
+
+
+
+
+
+// // explosion container
+// .explosion {
+//   position: absolute; // required if positioned on click else 'relative'
+//   width: 100px;
+//   height: 100px;
+//   pointer-events: none; // make it clickable trhough
+
+//   .particle {
+//     position: absolute; // required  
+//     width: 15px;
+//     height: 15px;
+//     border-radius: 50%;
+//     animation: pop 0.8s reverse forwards; // required
+//   }
+// }
+
+// #coin {
+//   position: relative;
+// }
+
+// // animation for particle fly away from the coin
+// @keyframes pop {
+//   from {
+//     opacity: 0;
+//   }
+
+//   to {
+//     top: 50%;
+//     left: 50%;
+//     opacity: 1;
+//   }
+// }
+
+
+// // .svg{
+// //   padding: 0;
+// //   margin: 0;
+// //   height: 30px;
+// //   width: 30px;
+// // }
+
+// // .btn-main {
+// //   &:focus {
+// //     outline: none;
+// //   }
+// //   position: relative;
+// //   padding:0;
+// //   background: none;
+// //   border: none;
+// //   cursor: pointer;
+// //   z-index: 10
+// // }
+
+
+
+// .number-container {
+//   font-size: 24px;
+//   color: #007bff;
+//   transition: transform 0.5s;
+// }
+
+
+
+
+// #confettiCanvas {
+//   overflow-y: hidden;
+//   overflow-x: hidden;
+//   width: 100%;
+//   margin: 0;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+// }
+
+
+
+// // .btn {
+// //   padding: 10px 20px;
+// //   position: relative;
+// //   border: 2px solid #222;
+// //   color: #fff;
+// //   background-color: #222;
+// //   position: relative;
+// //   overflow: hidden;
+// //   cursor: pointer;
+
+// //   .btn__text-dynamic {
+// //     display: flex;
+// //     justify-content: center;
+// //     align-items: center;
+// //     position: absolute;
+// //     top: 0;
+// //     left: 0;
+// //     right: 0;
+// //     bottom: 0;
+// //     z-index: 2;
+// //     transition: all ease 0.5s;
+// //   }
+
+// //   .btn__text-dynamic {
+// //     background-color: #fff;
+// //     color: #222;
+// //     overflow: hidden;
+// //   }
+// // }
+
+// // .btn--animation-from-right {
+// //   &:hover {
+// //     .btn__text-dynamic {
+// //       transform: translateX(100%);
+// //     }
+
+// //     .btn__text-dynamic-inner {
+// //       transform: translateX(-100%);
+// //     }
+// //   }
+// // }
+
+
+
+
+
+
+
+
+
+
+// .btn-conteiner {
+//   display: flex;
+//   justify-content: center;
+//   --color-text: #ffffff;
+//   --color-background: #ff135a;
+//   --color-outline: #ff145b80;
+//   --color-shadow: #00000080;
+// }
+
+// .btn-content {
+//   display: flex;
+//   align-items: center;
+//   padding: 5px 30px;
+//   text-decoration: none;
+//   font-family: 'Poppins', sans-serif;
+//   font-weight: 600;
+//   font-size: 30px;
+//   color: var(--color-text);
+//   background: var(--color-background);
+//   transition: 1s;
+//   border-radius: 100px;
+//   box-shadow: 0 0 0.2em 0 var(--color-background);
+// }
+
+// .btn-content:hover,
+// .btn-content:focus {
+//   transition: 0.5s;
+//   -webkit-animation: btn-content 1s;
+//   animation: btn-content 1s;
+//   outline: 0.1em solid transparent;
+//   outline-offset: 0.2em;
+//   box-shadow: 0 0 0.4em 0 var(--color-background);
+// }
+
+// .btn-content .icon-arrow {
+//   transition: 0.5s;
+//   margin-right: 0px;
+//   transform: scale(0.6);
+// }
+
+// .btn-content:hover .icon-arrow {
+//   transition: 0.5s;
+//   margin-right: 25px;
+// }
+
+// .icon-arrow {
+//   width: 20px;
+//   margin-left: 15px;
+//   position: relative;
+//   top: 6%;
+// }
+
+// /* SVG */
+// #arrow-icon-one {
+//   transition: 0.4s;
+//   transform: translateX(-60%);
+// }
+
+// #arrow-icon-two {
+//   transition: 0.5s;
+//   transform: translateX(-30%);
+// }
+
+// .btn-content:hover #arrow-icon-three {
+//   animation: color_anim 1s infinite 0.2s;
+// }
+
+// .btn-content:hover #arrow-icon-one {
+//   transform: translateX(0%);
+//   animation: color_anim 1s infinite 0.6s;
+// }
+
+// .btn-content:hover #arrow-icon-two {
+//   transform: translateX(0%);
+//   animation: color_anim 1s infinite 0.4s;
+// }
+
+// /* SVG animations */
+// @keyframes color_anim {
+//   0% {
+//     fill: white;
+//   }
+
+//   50% {
+//     fill: var(--color-background);
+//   }
+
+//   100% {
+//     fill: white;
+//   }
+// }
+
+// /* Button animations */
+// @-webkit-keyframes btn-content {
+//   0% {
+//     outline: 0.2em solid var(--color-background);
+//     outline-offset: 0;
+//   }
+// }
+
+// @keyframes btn-content {
+//   0% {
+//     outline: 0.2em solid var(--color-background);
+//     outline-offset: 0;
+//   }
+// }
+
+
+
+
+
+
+
+button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+  overflow: hidden;
+  position: relative;
+}
+
+button,
+button span {
+  transition: 200ms;
+}
+
+button .text {
+  transform: translateX(0px);
+  color: white;
+  font-weight: bold;
+}
+
+button .icon {
+  position: absolute;
+  // border-left: 1px solid #c41b1b;
+  transform: translateX(150px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // display: none;
+}
+
+button svg {
+  width: 15px;
+  fill: #eee;
+}
+
+button:hover {
+  background: #ff3636;
+}
+
+button:hover .text {
+  color: transparent;
+}
+
+button:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+  // display: block;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active .icon svg {
+  transform: scale(0.8);
+}

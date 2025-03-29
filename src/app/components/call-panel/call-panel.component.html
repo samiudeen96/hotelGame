@@ -1,0 +1,141 @@
+<div class="rel">
+    <!-- <p>{{valueDisplays}}</p> -->
+
+    <div class="coin_revenue">
+        <div class="coin">
+            <div class="d-none" *ngIf="coinAudio">
+                <audio controls [autoplay]="coinAudio">
+                    <source [src]="audioSourceCoin" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="coin_container">
+                <div id="coin">
+                    <div #explosionContainer class="explosion"></div>
+                    <img src="assets/images/dollar.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="revenue">
+            <p class="m-0">{{ service.total_cost | currency}}</p>
+        </div>
+    </div>
+
+    <div [@slideRight]="service.animState">
+        <div class="call_panel_inner" *ngIf="service.selectedCaller < service.caller.length && callPanelShow">
+            <div class="call_panel">
+                <div class="panel_inner">
+
+                    <div class="caller_img">
+                        <div class="caller_img_container"><img [src]="service.caller[service.selectedCaller].img"
+                                alt="">
+                        </div>
+                        <p class="fw-bold txt_brown">{{service.caller[service.selectedCaller].name}}</p>
+                    </div>
+
+                    <div class="caller_content">
+                        <div>
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <p class="fw-bold txt_brown f_16">Call :
+                                        <span *ngIf="service.selectedCaller<9">0</span>{{service.selectedCaller+1}} of
+                                        {{service.caller.length}}
+                                    </p>
+                                </div>
+
+                                <div *ngIf="service.caller[service.selectedCaller].shouldAutoplay" class="audioplayer">
+                                    <!-- <audio controls [autoplay]="service.caller[service.selectedCaller].accept" [src]="service.caller[service.selectedCaller].tone"></audio> -->
+                                    <audio controls [autoplay]="service.caller[service.selectedCaller].shouldAutoplay">
+                                        <source [src]="service.caller[service.selectedCaller].audioSource" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+
+                            <div *ngIf="selectedContent == 'question'" class="question">
+                                <!-- <p>{{item.question}}</p> -->
+                                <p [innerHTML]="service.question"></p>
+
+                                <div class="text-center">
+                                    <p class="inst">Please select 'Accept' if it's available or 'Reject' if it's not.
+                                    </p>
+                                </div>
+
+                                <div class="d-flex justify-content-center gap-5">
+                                    <div class="button" (click)="accept(service.selectedCaller)">
+                                        <button class="noselect btn-accept">
+                                            <span class="text">Accept</span>
+                                            <span class="icon"><img src="assets/images/cell.svg" alt=""></span>
+                                        </button>
+                                    </div>
+
+                                    <div class="button" (click)="reject(service.selectedCaller)">
+                                        <button class="noselect btn-reject">
+                                            <span class="text">Reject</span>
+                                            <span class="icon"><img src="assets/images/close.svg" alt=""></span>
+                                        </button>
+                                    </div>
+                                    <!-- <button class="btn btn-accept" (click)="accept(service.selectedCaller)">Accept</button>
+                                    <button class="btn btn-reject" (click)="reject(service.selectedCaller)">Reject</button> -->
+                                </div>
+                            </div>
+
+                            <div class="success" *ngIf="selectedContent == 'success'">
+                                <div class="text-center">
+                                    <img src="assets/images/success.svg" alt="">
+                                    <p class="success_txt">Booked</p>
+                                    <!-- <p class="mb-2" [innerHTML]="item.success"></p> -->
+                                    <p>Your room booking is done. You have earned 200 coins for booking.</p>
+                                    <!-- <button class="btn btn-accept" (click)="next(service.selectedCaller)"
+                                        *ngIf="service.selectedCaller != 13">Next</button> -->
+                                    <div class="button d-flex center" *ngIf="service.selectedCaller != 13">
+                                        <button class="noselect btn-accept" (click)="next(service.selectedCaller)">
+                                            <span class="text">Next</span>
+                                            <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reject" *ngIf="selectedContent == 'not_allowed'">
+                                <div class="text-center">
+                                    <img src="assets/images/reject.svg" alt="">
+                                    <p class="reject_txt">Sorry</p>
+                                    <!-- <p class="mb-2" [innerHTML]="item.reject"></p> -->
+                                    <p>There is no room available on this date.</p>
+                                    <!-- <button class="btn btn-accept" (click)="next(service.selectedCaller)">Next</button> -->
+                                    <div class="button d-flex center">
+                                        <button class="noselect btn-accept" (click)="next(service.selectedCaller)">
+                                            <span class="text">Next</span>
+                                            <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reject" *ngIf="selectedContent == 'reject'">
+                                <div class="text-center">
+                                    <img src="assets/images/reject.svg" alt="">
+                                    <p class="reject_txt">Not Booked</p>
+                                    <!-- <p class="mb-2" [innerHTML]="item.reject"></p> -->
+                                    <p>Your have rejected the Room booking.</p>
+                                    <!-- <button class="btn btn-accept" (click)="next(service.selectedCaller)"
+                                        *ngIf="service.selectedCaller != 13">Next</button> -->
+
+                                    <div class="button d-flex center" *ngIf="service.selectedCaller != 13">
+                                        <button class="noselect btn-accept" (click)="next(service.selectedCaller)">
+                                            <span class="text">Next</span>
+                                            <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

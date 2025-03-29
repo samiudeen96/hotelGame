@@ -1,0 +1,58 @@
+<div class="table_panel_inner">
+    <div class="table">
+        <div class="text-center">
+            <h4 class="txt_brown fw-bold mb-3">Room Booking Chart</h4>
+        </div>
+
+        <div class="d-flex center">
+            <table>
+                <tr>
+                    <th></th>
+                    <th *ngFor="let item of data">
+                        <p class="mt-2" [innerHTML]="item.date"></p>
+                    </th>
+                </tr>
+                <tr *ngFor="let item of table; let i = index">
+                    <td><b>Room {{i+1}}</b></td>
+                    <td *ngFor="let fill of item; let i = index">
+                        <!-- <div class="room_booking" >
+                            <div [class.booked]="fill.filled == true"></div>
+                        </div> -->
+
+                        <div class="room_booking " [class.booked]="fill.filled == true">
+                            <div class="btn__text-dynamic">
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="status pt-2 pb-2"
+            [class.fbetween]="service.selectedQues == service.caller.length-1 && service.show_chart != 'charts'">
+
+            <!-- <button class="btn btn-next" (click)="service.showChart()">Next</button> -->
+            <div class="button"
+                *ngIf="service.selectedQues == service.caller.length -1 && service.show_chart != 'charts'">
+                <button class="noselect btn-next" (click)="service.showChart()">
+                    <span class="text">Next</span>
+                    <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                </button>
+            </div>
+
+            <div class="d-flex gap-3">
+                <div class="d-flex center gap-2">
+                    <div class="booked_status"></div>
+                    <p class="m-0">Booked</p>
+                </div>
+
+                <div class="d-flex center gap-2">
+                    <div class="booked_available"></div>
+                    <p class="m-0">Available</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

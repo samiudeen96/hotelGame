@@ -1,0 +1,44 @@
+.coin_container {
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+
+  // explosion container
+  .explosion {
+    position: absolute; // required if positioned on click else 'relative'
+    width: 100px;
+    height: 100px;
+    pointer-events: none; // make it clickable trhough
+
+    .particle {
+      position: absolute; // required  
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      animation: pop 0.8s reverse forwards; // required
+    }
+  }
+
+  #coin {
+    position: relative;
+    margin: 0px;
+  }
+
+  // animation for particle fly away from the coin
+  @keyframes pop {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+  }
+}

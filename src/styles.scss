@@ -1,0 +1,187 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "variable.scss";
+
+@font-face {
+    font-family: "RammettoOne-Regular";
+    src: url(assets/fonts/RammettoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+h1 {
+    font-weight: bold;
+    // font-size: 20px;
+}
+
+h2 {
+    // margin-bottom: 1rem;
+    font-weight: bold;
+    color: $brown;
+}
+
+h3 {
+    font-weight: bold;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins-Regular", Arial, sans-serif;
+    font-size: 18px;
+}
+
+.btn {
+    font-size: 14px !important;
+    color: #ffffff !important;
+    width: 100px !important;
+    height: 36px !important;
+    cursor: pointer !important;
+}
+
+.btn-next {
+    background-color: $btn !important;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.txt_brown {
+    color: $brown;
+}
+
+.nohover:hover {
+    border: 4px solid #D9D9D9 !important;
+}
+
+.noselected {
+    border: 4px solid #D9D9D9 !important;
+}
+
+.inst {
+    color: $brown;
+    font-style: italic;
+}
+
+.f_16 {
+    font-size: 16px;
+}
+
+.f_14 {
+    font-size: 14px;
+}
+
+.reject_txt {
+    color: rgba(222, 49, 49, 1);
+    font-weight: bold;
+}
+
+.success_txt {
+    color: rgba(70, 194, 99, 1);
+    font-weight: bold;
+}
+
+.txt_green{
+    color: $btn !important;
+    font-weight: bold;
+}
+
+.fbetween {
+    justify-content: space-between !important;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.txt_lblack {
+    // color: $btn;
+    color: #e29909;
+}
+
+
+.button {
+    button {
+        // margin-top: 20px;
+        width: 100px;
+        height: 38px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: red;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+        background: #e62222;
+        overflow: hidden;
+        position: relative;
+    }
+
+    button,
+    button span {
+        transition: 300ms;
+    }
+
+    button .text {
+        transform: translateX(0px);
+        color: white;
+        // font-weight: bold;
+        font-size: 14px !important;
+    }
+
+    button .icon {
+        position: absolute;
+        // border-left: 1px solid #c41b1b;
+        transform: translateX(150px);
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // display: none;
+    }
+
+    button svg {
+        width: 15px;
+        fill: #eee;
+    }
+
+    button:hover {
+        background: #ff3636;
+    }
+
+    button:hover .text {
+        color: transparent;
+    }
+
+    button:hover .icon {
+        width: 150px;
+        border-left: none;
+        transform: translateX(0);
+        // display: block;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    button:active .icon svg {
+        transform: scale(0.8);
+    }
+}
+
+
+.text-small{
+    font-size: 12px;
+}
+
+.rel{
+    position: relative;
+}

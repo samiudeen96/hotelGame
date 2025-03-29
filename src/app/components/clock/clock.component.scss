@@ -1,0 +1,450 @@
+// .clock_container {
+//     display: flex;
+//     background-image: url("../../../assets/images/home.svg");
+//     height: 100%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+
+//     .clock-dial {
+//         width: 500px;
+//         height: 500px;
+//         background-color: rgb(222 158 72);
+//         border-radius: 50%;
+//         margin: 0 auto;
+//         position: relative;
+
+//         .point {
+//             width: 20px;
+//             height: 20px;
+//             background-color: #563727;
+//             border-radius: 50%;
+//             position: absolute;
+//             top: 240px;
+//             left: 240px;
+//         }
+
+//         .hour {
+//             font-size: 30px;
+//             font-weight: bold;
+//             color: #372c2e;
+//             position: absolute;
+//         }
+
+//         .hour-1 {
+//             top: 40px;
+//             right: 130px;
+//         }
+
+//         .hour-2 {
+//             top: 125px;
+//             right: 45px;
+//         }
+
+//         .hour-3 {
+//             top: 235px;
+//             right: 10px;
+//         }
+
+//         .hour-4 {
+//             top: 345px;
+//             right: 45px;
+//         }
+
+//         .hour-5 {
+//             top: 430px;
+//             right: 130px;
+//         }
+
+//         .hour-6 {
+//             bottom: 10px;
+//             right: 240px;
+//         }
+
+//         .hour-7 {
+//             top: 430px;
+//             left: 130px;
+//         }
+
+//         .hour-8 {
+//             top: 345px;
+//             left: 45px;
+//         }
+
+//         .hour-9 {
+//             top: 235px;
+//             left: 10px;
+//         }
+
+//         .hour-10 {
+//             top: 125px;
+//             left: 45px;
+//         }
+
+//         .hour-11 {
+//             top: 40px;
+//             left: 130px;
+//         }
+
+//         .hour-12 {
+//             top: 10px;
+//             left: 235px;
+//         }
+
+//         .brand {
+//             font-size: 20px;
+//             font-weight: bold;
+//             color: #563727;
+//             position: absolute;
+//             top: 90px;
+//             left: 47.5%;
+//         }
+
+
+//         .minute_hand_wrapper {
+//             width: 400px;
+//             height: 400px;
+//             position: absolute;
+//             top: 50px;
+//             left: 50px;
+//             border-radius: 50%;
+//         }
+
+//         .minute_hand {
+//             position: relative;
+//         }
+
+
+
+//         .minute_hand .hand {
+//             position: absolute;
+//             width: 4px;
+//             height: 200px;
+//             background-color: #563727;
+//             left: 198px;
+//         }
+
+
+//         .minute_hand .arrow {
+//             font-size: 30px;
+//             font-weight: bold;
+//             color: #563727;
+//             transform: rotate(180deg);
+//             position: absolute;
+//             left: 190px;
+//             top: -14px;
+//         }
+
+//         .hour_hand_wrapper {
+//             width: 300px;
+//             height: 300px;
+//             position: absolute;
+//             top: 100px;
+//             left: 100px;
+//             border-radius: 50%;
+//         }
+
+//         .hour_hand {
+//             position: relative;
+
+//             .hand {
+//                 width: 4px;
+//                 height: 150px;
+//                 background-color: #563727;
+//                 position: absolute;
+//                 left: 148px;
+//             }
+
+//             .arrow {
+//                 font-size: 30px;
+//                 font-weight: bold;
+//                 color: #563727;
+//                 transform: rotate(180deg);
+//                 position: absolute;
+//                 left: 140px;
+//                 top: -14px;
+//             }
+
+//         }
+
+
+//         .second_hand_wrapper {
+//             width: 350px;
+//             height: 350px;
+//             position: absolute;
+//             top: 75px;
+//             left: 75px;
+//             border-radius: 50%;
+
+//             .second_hand {
+//                 position: relative;
+
+//                 .hand {
+//                     width: 2px;
+//                     height: 175px;
+//                     background-color: #aa7228;
+//                     position: absolute;
+//                     left: 174px;
+//                 }
+//             }
+//         }
+//     }
+
+
+// }
+
+
+
+
+    .clock_dial_outer {
+        background: #563727;
+        // padding: 12px;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // zoom: 4;
+
+
+        .clock-dial {
+            // width: 120px;
+            // height: 120px;
+            // margin: 2px;
+            width: 85px;
+            height: 85px;
+            background-color: #E8BF84;
+            border-radius: 50%;
+            // margin: 0 auto;
+            position: relative;
+            // box-shadow: 5px 5px 10px gray;
+            
+
+            .point {
+                width: 5px;
+                height: 5px;
+                background-color: #563727;
+                border-radius: 50%;
+                position: absolute;
+                top: 40px;
+                left: 40px;
+                
+            }
+
+            .hour {
+                // font-size: 30px;
+                background-color: #372c2e;
+                position: absolute;
+            }
+
+            .hour-1 {
+                height: 4px;
+                width: 2px;
+                top: 2px;
+                left: 41.5px;
+            }
+
+            .hour-2 {
+                top: 125px;
+                right: 45px;
+            }
+
+            .hour-3 {
+                top: 41.5px;
+                left: 79px;
+                height: 2px;
+                width: 4px;
+            }
+
+            .hour-4 {
+                top: 345px;
+                right: 45px;
+            }
+
+            .hour-5 {
+                top: 430px;
+                right: 130px;
+            }
+
+            .hour-6 {
+                height: 4px;
+                width: 2px;
+                top: 79px;
+                left: 41.5px;
+            }
+
+            .hour-7 {
+                top: 430px;
+                left: 130px;
+            }
+
+            .hour-8 {
+                top: 345px;
+                left: 45px;
+            }
+
+            .hour-9 {
+                top: 41.5px;
+                left: 2px;
+                height: 2px;
+                width: 4px;
+            }
+
+            .hour-10 {
+                top: 125px;
+                left: 45px;
+            }
+
+            .hour-11 {
+                top: 40px;
+                left: 130px;
+            }
+
+            .hour-12 {
+                height: 4px;
+                width: 2px;
+                top: 2px;
+                left: 41.5px;
+            }
+
+            .brand {
+                font-size: 20px;
+                font-weight: bold;
+                color: #563727;
+                position: absolute;
+                top: 90px;
+                left: 47.5%;
+            }
+
+
+            .minute_hand_wrapper {
+                width: 75px;
+                height: 75px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                // background-color: rgba(255, 0, 0, 0.2901960784);
+                // zoom: 0.2;
+
+                // width: 50px;
+                // height: 50px;
+                // position: absolute;
+                // top: 0;
+                // left: 0;
+                // border-radius: 50%;
+                // background: red;
+
+                .minute_hand {
+                    position: relative;
+
+                    .hand {
+                        position: absolute;
+                        width: 2px;
+                        height: 32px;
+                        background-color: #563727;
+                        left: 36.5px;
+                        top: 6px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+
+            .minute_hand .arrow {
+                font-size: 30px;
+                font-weight: bold;
+                color: #563727;
+                transform: rotate(180deg);
+                position: absolute;
+                left: 190px;
+                top: -14px;
+            }
+
+            .hour_hand_wrapper {
+                // width: 300px;
+                // height: 300px;
+                // position: absolute;
+                // top: 100px;
+                // left: 100px;
+                // border-radius: 50%;
+                width: 75px;
+                height: 75px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                // background-color: rgba(255, 0, 0, 0.2901960784);
+            }
+
+            .hour_hand {
+                position: relative;
+
+                .hand {
+                    // width: 4px;
+                    // height: 150px;
+                    // background-color: #563727;
+                    // position: absolute;
+                    // left: 148px;
+                    position: absolute;
+                    width: 2px;
+                    height: 18px;
+                    background-color: #563727;
+                    left: 36.5px;
+                    top: 18px;
+                    z-index: -1;
+                }
+
+                .arrow {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #563727;
+                    transform: rotate(180deg);
+                    position: absolute;
+                    left: 140px;
+                    top: -14px;
+                }
+
+            }
+
+
+            .second_hand_wrapper {
+                width: 75px;
+                height: 75px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                // background-color: rgba(255, 0, 0, 0.2901960784);
+
+                .second_hand {
+                    position: relative;
+
+                    .hand {
+                        position: absolute;
+                        width: 1.5px;
+                        height: 50px;
+                        background-color: #e5344f;
+                        left: 36.8px;
+                        top: 2px;
+                        z-index: -1;
+                    }
+
+                    .dot {
+                        position: absolute;
+                        width: 4px;
+                        height: 4px;
+                        background-color: #e5344f;
+                        left: 35.5px;
+                        top: 50px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    .country{
+        font-size: 14px;
+    }
+

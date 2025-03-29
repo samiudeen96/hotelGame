@@ -1,0 +1,36 @@
+<div class="table_outer">
+    <div class="table">
+        <div class="text-center">
+            <h4 class="txt_brown fw-bold mb-3">Booking Data</h4>
+        </div>
+
+        <div class="d-flex center">
+            <table>
+                <tr>
+                    <td>No of people contact</td>
+                    <td>{{service.caller.length}}</td>
+                </tr>
+                <tr>
+                    <td>No of people accepted</td>
+                    <td>{{service.no_of_people_accepted}}</td>
+                </tr>
+                <tr>
+                    <td>No of Days Booked</td>
+                    <td>{{service.no_of_room_booked}}</td>
+                </tr>
+
+                <tr>
+                    <td>Cost per room</td>
+                    <td>{{service.room_cost | currency}}</td>
+                </tr>
+
+                <tr>
+                    <td>Total Revenue</td>
+                    <td>{{service.total_cost | currency}}</td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+</div>

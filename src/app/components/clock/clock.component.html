@@ -1,0 +1,85 @@
+<!-- <div class="clock_container">
+    <div class="clock-dial" *ngFor="let item of clock">
+        <div class="point"></div>
+        <div class="hour hour-1">1</div>
+        <div class="hour hour-2">2</div>
+        <div class="hour hour-3">3</div>
+        <div class="hour hour-4">4</div>
+        <div class="hour hour-5">5</div>
+        <div class="hour hour-6">6</div>
+        <div class="hour hour-7">7</div>
+        <div class="hour hour-8">8</div>
+        <div class="hour hour-9">9</div>
+        <div class="hour hour-10">10</div>
+        <div class="hour hour-11">11</div>
+        <div class="hour hour-12">12</div>
+        <div class="brand">HT</div>
+
+        <div class="minute_hand_wrapper" [style.transform]="minuteHandTransform">
+            <div class="minute_hand">
+                <div class="hand"></div>
+                <div class="arrow">V</div>
+            </div>
+        </div>
+
+        <div class="hour_hand_wrapper" [style.transform]="hourHandTransform">
+            <div class="hour_hand">
+                <div class="hand"></div>
+                <div class="arrow">V</div>
+            </div>
+        </div>
+
+        <div class="second_hand_wrapper" [style.transform]="secondHandTransform">
+            <div class="second_hand">
+                <div class="hand"></div>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+
+<div>
+    <!-- <div *ngFor="let item of service.clock; let i = index" (click)="getZone(i)"> -->
+        <div class="clock_dial_outer">
+            <div class="clock-dial">
+                <div class="point"></div>
+                <!-- <div class="hour hour-1"></div> -->
+                <!-- <div class="hour hour-2"></div> -->
+                <div class="hour hour-3"></div>
+                <!--<div class="hour hour-4">4</div>-->
+                <!--<div class="hour hour-5">5</div>-->
+                <div class="hour hour-6"></div>
+                <!--<div class="hour hour-7">7</div>-->
+                <!--<div class="hour hour-8">8</div>-->
+                <div class="hour hour-9"></div>
+                <!--<div class="hour hour-10">10</div>-->
+                <!--<div class="hour hour-11">11</div>-->
+                <div class="hour hour-12"></div>
+                <!--<div class="brand">HT</div> -->
+
+                <div class="minute_hand_wrapper" [style.transform]="clock.minuteHandTransform">
+                    <div class="minute_hand">
+                        <div class="hand"></div>
+                        <!-- <div class="arrow">V</div> -->
+                    </div>
+                </div>
+
+                <div class="hour_hand_wrapper" [style.transform]="clock.hourHandTransform">
+                    <div class="hour_hand">
+                        <div class="hand"></div>
+                        <!-- <div class="arrow">V</div> -->
+                    </div>
+                </div>
+
+                <div class="second_hand_wrapper" [style.transform]="clock.secondHandTransform">
+                    <div class="second_hand">
+                        <div class="hand"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2 country"><p class="fw-bold">{{clock.country}}</p></div>
+    </div>
+
+    <!-- {{timeZone}} -->

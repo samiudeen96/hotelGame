@@ -1,0 +1,420 @@
+<div class="home" *ngIf="selectedPage != 'reception'">
+
+    <div class="welcome" *ngIf="selectedPage == 'welcome'">
+        <div class="card_abs" [@FadeUp]>
+            <div class="card p-4">
+
+                <h2>Welcome</h2>
+                <p class="mt-2">Welcome to the <span class="txt_brown fw-bold">Brownstone Luxury Hotel</span>,
+                    where you step into the role of our hotel’s receptionist. You're about to embark on a
+                    dynamic journey, attending calls and ensuring our guests have a remarkable experience.</p>
+
+                <div class="input">
+                    <div class="input-group mt-1">
+                        <input type="text" class="form-control form-control-lg" [(ngModel)]="this.service.name"
+                            placeholder="Type your name" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <p class="m-0 error_txt mt-1" *ngIf="errormsg">{{this.errormsg}}</p>
+                </div>
+
+                <div class="mt-2">
+                    <p>Choose your Character</p>
+                    <!-- {{seletedData | json}} -->
+                    <div class="character_img">
+                        <div class="img_container" *ngFor="let item of character; let i = index"
+                            [class.nohover]="this.service.name == ''" [class.noselected]="this.service.name == ''"
+                            (click)="selectCharacter(i, item)" [class.selected]="selected == i">
+                            <img [src]="item.img" alt="">
+                        </div>
+                    </div>
+                    <!-- <button class="btn btn-next mt-4" [class.disabled]="this.btn == false"
+                        (click)="gotoinstruction()">Next</button> -->
+
+                    <div class="button mt-4" (click)="gotoinstruction()">
+                        <button class="noselect btn-next" [class.disabled]="this.btn == false">
+                            <span class="text">Next</span>
+                            <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="blur_bg" [@FadeZoom] *ngIf="selectedPage =='instruction'">
+        <div class="pop_up">
+            <div class="row pop_row">
+                <div class="col-9">
+                    <div class="pop_content">
+                        <div class="row align-items-center gap-4">
+                            <div class="col-4">
+                                <div class="bg_popbg">
+
+                                    <div class="bg_pop_header">
+                                        <div class="hotel_name">
+                                            <div class="hotel_name_inner">
+                                                <div class="dot1"></div>
+                                                <div class="dot2"></div>
+                                                <div class="dot3"></div>
+                                                <div class="dot4"></div>
+                                                <div class="text_container">
+                                                    <div>
+                                                        <h3 class="m-0 RammettoOne">BROWNSTONE</h3>
+                                                    </div>
+                                                    <div class="text-end txt_brown">
+                                                        <h4 class="m-0">LUXURY HOTEL</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg_pop_body">
+                                        <img [src]="seletedData.img1" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <h3>Instructions</h3>
+                                <p>Welcome {{seletedData.user}}, to the <span class="txt_brown fw-bold">Brownstone
+                                        Luxury Hotel</span>, where you continue
+                                    your role as
+                                    Stella, our dedicated hotel receptionist. You're about to dive into an immersive
+                                    experience, attending to calls and ensuring our guests enjoy an exceptional stay.
+                                </p>
+                                <p>In this captivating game, you'll get a taste of the complexities of hotel management
+                                    as a receptionist. Your primary objective is to maximize the hotel's profits by
+                                    efficiently managing room bookings during a series of customer calls. However, in
+                                    our luxury hotel has limited rooms available, so it's vital to closely monitor room
+                                    availability on specific dates. If there are no rooms available on a particular
+                                    date, you'll need to politely decline the booking.</p>
+                                <p>Following all the calls, your performance will be assessed, and the total profit
+                                    generated will be tallied. Your mission remains crystal clear: strive to improve
+                                    your skills with each game round and provide top-notch service at the Brownstone
+                                    Luxury Hotel!</p>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" [(ngModel)]="isChecked"
+                                        id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        <p class="ms-2 m-0">Read the instructions carefully before you begin.</p>
+                                    </label>
+                                </div>
+
+                                <!-- <button class="btn btn-next mt-4" (click)="gotoReception()"
+                                    [class.disabled]="!isChecked">Next</button> -->
+
+                                <div class="button mt-3" (click)="gotoReception()">
+                                    <button class="noselect btn-next" [class.disabled]="!isChecked">
+                                        <span class="text">Next</span>
+                                        <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="reception" *ngIf="selectedPage == 'reception'" [@SlowFadeZoom]>
+    <div class="hotel_name">
+        <div class="hotel_name_inner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+            <div class="dot4"></div>
+            <div class="text_container">
+                <div>
+                    <h3 class="m-0 RammettoOne">BROWNSTONE</h3>
+                </div>
+                <div class="text-end txt_brown">
+                    <h4 class="m-0">LUXURY HOTEL</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="scoreBoard pt-3">
+        <div class="scoreBoard_inner">
+            <div>
+                <!- - <app-coin #com1></app-coin> - ->
+                <! -- <ng-container *ngFor="let item of service.coin;let i = index">
+                    <div *ngIf="this.service.selectedCoin == i" class="d-none">
+                        <audio controls [autoplay]="this.service.selectedCoin == i && this.service.selectedCoin != 0">
+                            <source [src]="audioSource" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="coin" *ngIf="this.service.selectedCoin == i">
+                        <img [class.flip]="this.service.selectedCoin == i && this.service.selectedCoin != 0"
+                            src="assets/images/dollar.svg" alt="">
+                    </div>
+                </ng-container> - ->
+            </div>
+
+            <div class="revenue">
+                <!- - <p class="m-0">{{ currentNumber | currency}}</p> - ->
+                <app-total-cost></app-total-cost>
+                <!- - <app-rough [startValue]="0" [endValue]="this.service.total_cost"></app-rough> - ->
+            </div>
+        </div>
+
+        <!- - <div class="scoreBoard_inner justify-content-end">
+            <div class="total_call">
+                <div class="d-flex gap-3 align-items-center">
+                    <div>
+                        <img src="assets/images/person_icon.svg" alt="">
+                    </div>
+                    <div>
+                        <p class="m-0">
+                            <span *ngIf="service.selectedQues <9">0</span>{{service.selectedQues + 1}} /
+                            {{service.caller.length}}  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> - ->
+    </div> -->
+
+    <div class="clock_abs">
+
+        <div class="clock_container">
+            <app-clock *ngFor="let item of this.service.clock" [clock]="item"></app-clock>
+        </div>
+    </div>
+
+    <div class="person">
+        <img [src]="seletedData.img2" alt="">
+    </div>
+
+
+    <div class="caller-panel"  *ngIf="service.show_chart != 'charts' ">
+        <div>
+            <app-call-panel></app-call-panel>
+        </div>
+    </div>
+
+    <div class="booking-panel">
+        <div [@slideRight]="service.animState">
+            <app-room-booking-chart [data]="service.booking" [table]="service.table"></app-room-booking-chart>
+        </div>
+    </div>
+
+    <div class="chart" *ngIf="service.show_chart == 'charts' && service.show_tables != 'tables'" [@SlowFadeZoom]>
+        <div class="">
+            <div class="d-flex gap-5">
+
+                <div>
+                    <app-single-table></app-single-table>
+                </div>
+
+                <div class="chart_outer">
+                    <div class="chart_container">
+                        <div class="d-flex center">
+                            <p class="txt_brown m-0 fw-bold">Profit</p>
+                        </div>
+                        <canvas id="canvas">{{service.chart1}}</canvas>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-2">
+                <div class="d-flex gap-5">
+                    <div>
+                        <app-room-booking-chart [data]="service.booking"
+                            [table]="service.table"></app-room-booking-chart>
+                    </div>
+
+                    <div>
+                        <div class="chart_outer">
+                            <div class="chart_container">
+                                <div class="d-flex center">
+                                    <p class="txt_brown m-0 fw-bold">No of room booked</p>
+                                </div>
+                                <canvas id="canvas1">{{service.chart2}}</canvas>
+
+                            </div>
+                        </div>
+                        <!-- <div class="text-end">
+                            <button class="mt-3 btn btn-next" (click)="gototables()">Next</button>
+                        </div> -->
+                        <div class="button mt-3 d-flex justify-content-end">
+                            <button class="noselect btn-next" (click)="gototables()">
+                                <span class="text">Next</span>
+                                <span class="icon"><img src="assets/images/next.svg" alt=""></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tables" *ngIf="service.show_tables == 'tables' && service.show_subscribePage != 'subscribe'"
+        [@SlowFadeZoom]>
+        <app-tables [tableData1]="this.service" [tableData2]="this.service"></app-tables>
+    </div>
+
+    <!-- <div class="subscribe" *ngIf="service.show_subscribePage == 'subscribe'">
+        <div class="subscribePop">
+            <div class="row m-5">
+                <div class="col-7 d-flex center">
+                    <h1 class="greeting_txt">Thank You</h1>
+                </div>
+                <div class="col-5 d-flex center">
+                    <form [formGroup]="form">
+                        <div class="form">
+                            <div class="form-header">
+                                <h4 class="fw-bold">Subscribe to get more detail</h4>
+                            </div>
+                            <div class="form-content pe-4 ps-4">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name" formControlName="fullname">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Organization’s Name</label>
+                                    <input type="text" class="form-control"
+                                        placeholder="Enter your organization’s name" formControlName="orgname">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="Enter your number" formControlName="telNumber">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Email ID</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email" formControlName="email">
+                                </div>
+
+                                <div class="mb-3">
+                                    <button class="btn-submit" >Submit</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <div class="subscribe" *ngIf="service.show_subscribePage == 'subscribe'" [@FadeZoom]>
+        <div class="subscribePop">
+            <div class="row m-5">
+                <div class="col-7 d-flex center">
+                    <div>
+                        <h1 class="greeting_txt text-center mb-4">Thank You</h1>
+                        <p>Congratulations on successfully managing the intricacies of hotel reception in the Brownstone
+                            Luxury Hotel game! Your dedication and skillful decision-making have undoubtedly contributed
+                            to
+                            the hotel's success.</p>
+
+                        <p> As a specialist in web development and e-learning gamification, <b>Hasna Technology</b> takes pride
+                            in
+                            creating immersive learning experiences. We hope you enjoyed the hotel management challenge
+                            and
+                            gained valuable insights into the world of hospitality.</p>
+
+                        <p> Should you have any questions, feedback, or if you're interested in exploring more about our
+                            web
+                            development and e-learning solutions, feel free to reach out. Your journey with us doesn't
+                            end
+                            here; there's always more to discover!</p>
+                    </div>
+                </div>
+                <div class="col-5 d-flex center">
+                    <form class="w-100" [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <div class="form">
+                            <div class="form-header">
+                                <h4 class="fw-bold">Contact Us</h4>
+                            </div>
+                            <div class="form-content pe-4 ps-4">
+                                <div class="input_bg">
+                                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name"
+                                        [class.disabled]="formSubmitted" formControlName="name"
+                                        [ngClass]="{'is-invalid': form.get('name').touched && form.get('name').errors?.required}">
+                                    <div class="text-danger ms-2 text-small"
+                                        *ngIf="form.get('name').hasError('required') && (form.get('name').touched || submit)">
+                                        {{ validationMessages.name.required }}
+                                    </div>
+                                </div>
+                                <div class="input_bg">
+                                    <label for="exampleFormControlInput1" class="form-label">Organization’s Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your organization’s name"
+                                        [class.disabled]="formSubmitted" formControlName="org"
+                                        [ngClass]="{'is-invalid': form.get('org').touched && form.get('org').errors?.required}">
+                                    <div class="text-danger ms-2 text-small"
+                                        *ngIf="form.get('org').hasError('required') && (form.get('org').touched || submit)">
+                                        {{ validationMessages.org.required }}
+                                    </div>
+                                </div>
+
+                                <div class="input_bg">
+                                    <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
+                                    <input type="tel" class="form-control" placeholder="Enter your number"
+                                        [class.disabled]="formSubmitted" formControlName="mobile"
+                                        [ngClass]="{'is-invalid': form.get('mobile').touched && form.get('mobile').errors?.required}">
+                                    <div class="text-danger ms-2 text-small"
+                                        *ngIf="form.get('mobile').hasError('required') && (form.get('mobile').touched || submit)">
+                                        {{ validationMessages.mobile.required }}
+                                    </div>
+                                </div>
+
+                                <div class="input_bg">
+                                    <label for="exampleFormControlInput1" class="form-label">Email ID</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email"
+                                        [class.disabled]="formSubmitted" formControlName="email"
+                                        [ngClass]="{'is-invalid': form.get('email').touched && form.get('email').errors?.required || Email.errors?.pattern}">
+                                    <div class="text-danger ms-2 text-small"
+                                        *ngIf="form.get('email').hasError('required') && (form.get('email').touched || submit)">
+                                        {{ validationMessages.email.required }}
+                                    </div>
+                                    <div class="text-danger ms-2 text-small"
+                                        *ngIf="form.get('email').hasError('email') && (form.get('email').touched || submit)">
+                                        {{ validationMessages.email.email }}
+                                    </div>
+                                </div>
+
+
+                                <div *ngIf="submit && !form.valid" class="alert alert-danger mt-2">
+                                    <p class="text-small mb-0">{{errMsg}}</p>
+                                </div>
+
+                                <div *ngIf="submit && form.valid && sucMsg != ''" class="alert alert-success  mt-2">
+                                    <p class="text-small mb-0">{{sucMsg}}</p>
+                                </div>
+                                <div class="mb-4 mt-2">
+                                    <button type="submit" [hidden]="formSubmitted" class="btn btn-dark submit">
+
+                                        <div *ngIf="loading" class="spinner-border" role="status">
+                                            <span class="sr-only"></span>
+                                        </div>
+                                        <span *ngIf="!loading">
+                                            Submit
+                                        </span>
+
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

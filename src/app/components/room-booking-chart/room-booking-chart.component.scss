@@ -1,0 +1,120 @@
+@import "../../../variable.scss";
+
+.table_panel_inner {
+  backdrop-filter: blur(3px);
+  background-color: #00000030;
+  padding: 4px;
+  border-radius: 15px;
+
+  .table {
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 20px 20px 5px 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 780px;
+    margin-bottom: 0;
+
+    table,
+    th,
+    td {
+      border: 2px solid #b9b9b9;
+      border-collapse: collapse;
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+    }
+
+    th {
+      width: 90px;
+      height: 50px;
+      background-color: #f0f0f0;
+    }
+
+    td {
+      width: 90px;
+      height: 35px;
+    }
+
+    // .room_booking {
+    //   background-color: #000000;
+    //   margin: 0 10px;
+    //   height: 15px;
+    //   border-radius: 50px;
+    //   // transform: translateY(125%);
+    //   // transition: all 0.7s ease !important;
+    //   transition: all 0.5s ease;
+    //   position: relative;
+    //   transform: translateX(0%) !important;
+
+    //   .booked {
+    //     background-color: $btn;
+    //     transform: translateX(0%) !important;
+    //     // transition: all 0.7s ease !important;
+    //     transition: all 0.5s ease;
+    //     height: 100%;
+    //     border-radius: 50px;
+    //     position: absolute;
+    //     left: 0;
+    //     top: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     z-index: 1;
+    //   }
+    // }
+
+
+    .room_booking {
+      background-color: $btn;
+      margin: 0 10px;
+      height: 15px;
+      border-radius: 50px;
+      position: relative;
+      // overflow: hidden;
+
+      .btn__text-dynamic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        transition: all ease 0.5s;
+        background-color: #e4e4e4;
+        border-radius: 50px;
+      }
+    }
+
+    .booked {
+      overflow: hidden;
+      .btn__text-dynamic {
+        transform: translateX(100%);
+        height: 100%;
+      }
+    }
+
+    .status {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 5px;
+
+      .booked_status {
+        width: 10px;
+        height: 10px;
+        background-color: $success;
+      }
+
+      .booked_available {
+        width: 10px;
+        height: 10px;
+        background-color: $gray;
+      }
+    }
+  }
+}

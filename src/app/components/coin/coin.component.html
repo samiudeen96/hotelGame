@@ -1,0 +1,16 @@
+<ng-container *ngFor="let item of service.coin;let i = index">
+
+    <div *ngIf="this.service.selectedCoin == i" class="d-none">
+        <audio controls [autoplay]="this.service.selectedCoin == i && this.service.selectedCoin != 0">
+            <source [src]="audioSource" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="coin_container" *ngIf="this.service.selectedCoin == i">
+        <div id="coin">
+            <div #explosionContainer class="explosion"></div>
+            <img [class.flip]="this.service.selectedCoin == i && this.service.selectedCoin != 0"
+                src="assets/images/dollar.svg" alt="">
+        </div>
+    </div>
+    <!-- <button (click)="explode()"></button> -->
+</ng-container>
